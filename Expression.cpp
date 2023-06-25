@@ -72,7 +72,16 @@ void sieve() {
 
 void solve() {
 
-
+	ll a, b, c;
+	cin >> a >> b >> c;
+	ll x1, x2, x3, x4, x5;
+	x1 = a + (b * c);
+	x2 = a * (b + c);
+	x3 = (a + b) * c;
+	x4 = a * b * c;
+	x5 = a + b + c;
+	// cout << x1 << x2 << x3 << x4;
+	cout << max({x1, x2, x3, x4, x5}) << endl;
 }
 
 int main() {
@@ -84,8 +93,8 @@ int main() {
 
 	ios::sync_with_stdio(false); cin.tie(NULL);
 	sieve();
-	ll T;
-	cin >> T;
+	ll T = 1;
+	// cin >> T;
 	while (T--) {
 		solve();
 
